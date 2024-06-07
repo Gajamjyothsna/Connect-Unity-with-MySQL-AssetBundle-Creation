@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 3875145694
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: sphereassetbundleprefab
+      Dependencies: {}
+    Info_1:
+      Name: capsuleassetbundleprefab
+      Dependencies: {}
