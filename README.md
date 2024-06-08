@@ -11,6 +11,10 @@ This is a Project where Unity is connected with MySQL database using Local Serve
 - ### **Install PHP**
   Install the PHP from website (https://www.php.net/downloads.php). Set the environment Varaiables
 
+## **Creating DataBase**
+1. You can create Database uses MySQL workbench or PHP admin. But I have used command prompt for creating databases. Because, it is famiilar for me.
+2. Go to the MySQL path in Command Promot with this command ``` cd /usr/local/mysql/bin ```
+
 ## **Advance Topic Reference**
 We can do this project with using ODBC or the MySQL .Net Connector plugin. (https://github.com/Uncle-Uee/mysql-unity)
 
