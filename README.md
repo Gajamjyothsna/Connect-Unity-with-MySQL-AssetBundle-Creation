@@ -73,6 +73,36 @@ mysql> SELECT * FROM users;
 2 rows in set (0.00 sec)
 ```
 
+## **Test from web app**
+Finally, below is some barebones PHP code to test your database connection from a web application.
+```
+<?php
+# Credentials
+$database = 'foobar';
+$username = 'foobarAdmin';
+$password = 'your-password-here';
+
+# Establish connection
+try {
+    $conn = new PDO('mysql:host=localhost;dbname='.$database, $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo 'Connected successfully<br>';
+} catch(PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
+}
+
+# Test retrieving data
+$sql = 'SELECT * FROM users';
+$statement = $conn->query($sql);
+$data = $statement->fetchAll();
+foreach($data as $row) {
+    echo 'id: ' . $row['id'] . ', email: ' . $row['email'].'<br>';;
+}
+```
+If everything is set up correctly, the above code should produce output that looks like this:
+
+
+
 ## **Advance Topic Reference**
 We can do this project with using ODBC or the MySQL .Net Connector plugin. (https://github.com/Uncle-Uee/mysql-unity)
 
