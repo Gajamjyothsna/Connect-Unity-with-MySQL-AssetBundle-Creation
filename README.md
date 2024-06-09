@@ -101,6 +101,7 @@ foreach($data as $row) {
 ```
 If everything is set up correctly, the above code should produce output that looks like this:
 
+![Result image](https://s3.amazonaws.com/making-the-internet/cws-mysql-connection-test-from-browser@2x.png)
 
 
 ## **Advance Topic Reference**
