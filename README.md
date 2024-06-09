@@ -18,7 +18,7 @@ This is a Project where Unity is connected with MySQL database using Local Serve
 4. Now, Create the database with command ``` CREATE DATABASE foobar; ```. Replace foobar with your database name.
 5. You can confirm your database was created by running ```SHOW DATABASES:```
 ```
-SHOW DATABASES;
+mysql> SHOW DATABASES;
 +--------------------+
 | Database           |
 +--------------------+
@@ -29,6 +29,11 @@ SHOW DATABASES;
 | sys                |
 +--------------------+
 5 rows in set (0.01 sec)
+```
+6. Select into your database by running
+```   
+mysql> USE foobar;
+Database changed
 ```
 
 ## **Advance Topic Reference**
