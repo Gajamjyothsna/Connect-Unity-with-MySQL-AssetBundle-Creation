@@ -35,6 +35,43 @@ mysql> SHOW DATABASES;
 mysql> USE foobar;
 Database changed
 ```
+7. Let’s create a demo table called users with two fields, id and email:
+```   
+mysql> CREATE TABLE `users` ( 
+    `id` INT NOT NULL AUTO_INCREMENT, 
+    `email` VARCHAR(255), 
+    PRIMARY KEY (`id`)
+);
+Query OK, 0 rows affected (0.01 sec)
+```
+8. We can view the structure of our new table:
+```
+mysql> DESCRIBE users;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int          | NO   | PRI | NULL    | auto_increment |
+| email | varchar(255) | YES  |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+```
+9. And add a couple rows:
+```    
+mysql> INSERT INTO users (`email`) VALUES ('mail@codewithsusan.com'), ('test@user.com');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+```
+10. And view the new rows:
+```    
+mysql> SELECT * FROM users;
++----+------------------------+
+| id | email                  |
++----+------------------------+
+|  1 | mail@codewithsusan.com |
+|  2 | test@user.com          |
++----+------------------------+
+2 rows in set (0.00 sec)
+```
 
 ## **Advance Topic Reference**
 We can do this project with using ODBC or the MySQL .Net Connector plugin. (https://github.com/Uncle-Uee/mysql-unity)
